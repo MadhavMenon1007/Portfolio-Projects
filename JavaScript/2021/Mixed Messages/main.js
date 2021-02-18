@@ -1,13 +1,14 @@
-console.log("Welcome to mixed messages! All you have to do is type in the word \"Generate\" and we will generate a random message for you. \nHave fun!");
+console.log("Welcome to mixed messages! All you have to do is type in the word \"Generate\" and we will generate a random message for you. \nHave fun!\n\n");
 
-const generate_message=()=>{
+const generateMessage=()=>{
 
     const message={
-        firstPart: [],
-        secondPart:[],
-        thirdPart: []
+        firstPart: ["Hello"],
+        secondPart:["there"],
+        thirdPart: [""]
     }
-    let randomNumber=Math.floor(Math.random()*this.firstPart.length)
-    return `${message.firstPart} ${message.secondPart} ${message.thirdPart}`
+    let randomNumber=Math.floor(Math.random()*message.firstPart.length)
+    return `Message: ${message.firstPart[randomNumber]} ${message.secondPart[randomNumber]} ${message.thirdPart[randomNumber]}`
 }
 
+console.log(generateMessage());
